@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เพิ่มสินค้า</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            max-width: 400px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 32px;
+        }
+        h1 {
+            color: #2d7be5;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 10px;
+            border: 1px solid #bcdffb;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button {
+            background: #2d7be5;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #1a5fb4;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>เพิ่มสินค้าใหม่</h1>
+        <form action="/admin/product" method="POST">
+            <input type="text" name="name" placeholder="ชื่อสินค้า" required>
+            <input type="number" name="price" placeholder="ราคา" required>
+            <input type="number" name="stock" placeholder="จำนวนคงเหลือ" required>
+            <button type="submit">Add product</button>
+        </form>
+    </main>
+</body>
+</html>
